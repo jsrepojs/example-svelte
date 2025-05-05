@@ -1,0 +1,17 @@
+{
+	"$schema": "https://unpkg.com/jsrepo@2.0.0/schemas/registry-config.json",
+	"name": "@example/svelte",
+	"version": "package",
+	"readme": "README.md",
+	"dirs": ["./src/lib", "./src/lib/components"],
+	"doNotListBlocks": [],
+	"doNotListCategories": [],
+	"listBlocks": [],
+	"listCategories": [],
+	"excludeDeps": [],
+	"includeBlocks": [],
+	"includeCategories": ["ui", "utils"],
+	"excludeBlocks": [],
+	"excludeCategories": [],
+	"preview": false
+}
