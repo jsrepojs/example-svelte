@@ -1,5 +1,11 @@
 # example-svelte
 
+## 0.0.3
+
+### Patch Changes
+
+- 04cc38f: chore: add registry metadata
+
 ## 0.0.2
 
 ### Patch Changes
