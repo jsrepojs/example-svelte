@@ -6,12 +6,12 @@ Within is an example of a big red button to help demonstrate how jsrepo works.
 
 ### Relevant Links
 
--   [jsrepo](https://github.com/jsrepojs/jsrepo)
--   [jsrepo.com](https://jsrepo.com)
+- [jsrepo](https://github.com/jsrepojs/jsrepo)
+- [jsrepo.com](https://jsrepo.com)
 
 ### Prerequisites
 
--   Have an account on [jsrepo.com](https://jsrepo.com)
+- Have an account on [jsrepo.com](https://jsrepo.com)
 
 ## Tutorial
 
@@ -75,7 +75,7 @@ Start by running the init command:
 pnpm dlx jsrepo init --registry
 ```
 
-When asked _"Where are your blocks located?"_ answer `./src/lib` and then add another called `./src/lib/components` these directories are where our categories are. 
+When asked _"Where are your blocks located?"_ answer `./src/lib` and then add another called `./src/lib/components` these directories are where our categories are.
 
 Answer yes to _"Configure to publish to jsrepo.com?"_ and then input the name of your registry.
 
@@ -225,7 +225,7 @@ Now when we list our blocks only `big-red-button` will appear.
 		"homepage": "https://github.com/jsrepojs/example-svelte",
 		"repository": "https://github.com/jsrepojs/example-svelte",
 		"tags": ["registry", "svelte", "example", "jsrepo"]
-	},
+	}
 	// -- snip --
 }
 ```
@@ -283,6 +283,7 @@ Finally let's create a workflow so that we can publish a new version of our regi
 > If you are publishing from a workflow make sure to create a token [here](https://jsrepo.com/account/access-tokens/new) and add it with the name `JSREPO_TOKEN` under `Settings / Secrets and variables / Actions`
 
 `.github/workflows/publish.yml`
+
 ```yaml
 name: Publish
 
@@ -309,6 +310,9 @@ jobs:
             - name: Install dependencies
               run: pnpm install
 
+			- name: SvelteKit Sync
+              run: pnpm sync
+
             - name: Create Release Pull Request or Publish
               id: changesets
               uses: changesets/action@v1
@@ -323,6 +327,7 @@ jobs:
 ```
 
 Now lets create a changeset:
+
 ```sh
 pnpm changeset
 ```
