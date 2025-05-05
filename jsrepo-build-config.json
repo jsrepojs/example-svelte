@@ -2,6 +2,14 @@
 	"$schema": "https://unpkg.com/jsrepo@2.0.0/schemas/registry-config.json",
 	"name": "@example/svelte",
 	"version": "package",
+	"meta": {
+		"authors": ["Aidan Bleser"],
+		"bugs": "https://github.com/jsrepojs/example-svelte/issues",
+		"description": "A demo to show you how you can deploy your first Svelte registry to jsrepo.com",
+		"homepage": "https://github.com/jsrepojs/example-svelte",
+		"repository": "https://github.com/jsrepojs/example-svelte",
+		"tags": ["registry", "example", "jsrepo", "svelte"]
+	},
 	"readme": "README.md",
 	"dirs": ["./src/lib", "./src/lib/components"],
 	"doNotListBlocks": [],
